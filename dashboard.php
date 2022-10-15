@@ -102,7 +102,7 @@
 
             switch ($_GET['pagina']) {
                 case 'aca':
-                echo '<h2>Altura da coluna</h2>';
+                echo '<h2>Level</h2>';
                 include 'graficos/graficos.php'; 
                 
                 break;
@@ -114,7 +114,7 @@
     
                 case 'umidade':
                   echo '<h2>Full Data</h2>';
-                  include 'php_files/full_data.php'; 
+                  include 'php_files/data.php'; 
                 
                 break;
     

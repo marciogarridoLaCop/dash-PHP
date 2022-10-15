@@ -13,7 +13,7 @@ $tempint = '';
 
 while ($dados = mysqli_fetch_array($consulta)) {
 				
-  $mes = $mes . '"' . $dados['data_formatada'] . '",';
+     $mes = $mes . '"' . $dados['data_formatada'] . '",';
 	 $temp = $temp . '"' . $dados['temp'] . '",';
 	 $tempint = $tempint . '"' . $dados['tempint'] . '",';
 	 $aca = $aca . '"' . $dados['aca_adj'] . '",';
