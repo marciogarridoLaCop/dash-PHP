@@ -1,11 +1,9 @@
 <?php
-
-include 'conexao/cnn.php';
-          $sql = "SELECT DATE_FORMAT (`Datahora`,'%d/%m/%Y %H:%i') as data_formatada,temp,tempint,aca,aca_adj FROM SensorLogs 
-          WHERE datahora BETWEEN DATE_SUB(DATE(NOW()), INTERVAL 2 DAY) AND DATE_SUB(DATE(NOW()), INTERVAL 0 DAY)";
-          $consulta = mysqli_query($conn,$sql);
-
-#chart.js - Consultando valores no banco de dados
+#Consultando valores no banco de dados
+include($_SERVER['DOCUMENT_ROOT'].'/dash-php/cnn/cnn.php');
+  $sql = "SELECT DATE_FORMAT (`Datahora`,'%d/%m/%Y %H:%i') as data_formatada,temp,tempint,aca,aca_adj FROM SensorLogs 
+  WHERE datahora BETWEEN DATE_SUB(DATE(NOW()), INTERVAL 2 DAY) AND DATE_SUB(DATE(NOW()), INTERVAL 0 DAY)";
+  $consulta = mysqli_query($conn,$sql);
 
 $mes = '';
 $aca = '';
@@ -13,10 +11,9 @@ $aca_adj = '';
 $temp = '';
 $tempint = '';
 
-
 while ($dados = mysqli_fetch_array($consulta)) {
 				
-     $mes = $mes . '"' . $dados['data_formatada'] . '",';
+  $mes = $mes . '"' . $dados['data_formatada'] . '",';
 	 $temp = $temp . '"' . $dados['temp'] . '",';
 	 $tempint = $tempint . '"' . $dados['tempint'] . '",';
 	 $aca = $aca . '"' . $dados['aca_adj'] . '",';
@@ -29,8 +26,17 @@ while ($dados = mysqli_fetch_array($consulta)) {
 	 $tempint = trim($tempint);
 	
 }
+#Label das legendas
+$temperatura="Temperature";
+$pressao="Pressure";
+$external_temp="External Temperature";
+$internal_temp="Internal Temperature";
+$level_aca="Aca Level";
+$level_aca_adj="Aca Level Adj";
+$data="Date";
 
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -44,12 +50,12 @@ while ($dados = mysqli_fetch_array($consulta)) {
 <div class="container-fluid" style="background-color: #fff;margin-top: 20px;">
     <div class="row">
       <div class="col-md-6">
-        <h4>Nível</h4>
+        <h4>Level</h4>
         <div id="curve_chart" class="sombra"></div>
 		<canvas id="nivel"></canvas>
       </div>
       <div class="col-md-6">
-        <h4>Temperatura</h4>
+        <h4>Temperature</h4>
         <div id="curve_chart2"  class="sombra"></div>
 		<canvas id="temperatura"></canvas>
       </div>
@@ -68,14 +74,14 @@ while ($dados = mysqli_fetch_array($consulta)) {
     		labels:[<?php echo $mes; ?>],
     		datasets:
     		[{
-    			label:'Aca',
+    			label:'<?php echo $level_aca; ?>',
     			data:[<?php echo $aca; ?>],
     			backgroundColor: 'transparent',
     			borderColor: 'rgba(255,99,132)',
     			borderWidth: 3
     		},
 			{
-    			label:'Aca_Adj',
+    			label:'<?php echo $level_aca_adj; ?>',
     			data:[<?php echo $aca_adj; ?>],
     			backgroundColor: 'transparent',
     			borderColor: 'blue',
@@ -85,7 +91,7 @@ while ($dados = mysqli_fetch_array($consulta)) {
 
     },
     options: { 
-		
+      responsive: true,
 		scales: {
 			
 			xAxes: [{ 
@@ -93,7 +99,7 @@ while ($dados = mysqli_fetch_array($consulta)) {
 				scaleLabel: 
 					{
 					display: true,
-					labelString: 'Dia',
+					labelString: '<?php echo $data; ?>',
 					fontColor:'grey',
 					fontSize:11
 					},
@@ -139,14 +145,14 @@ while ($dados = mysqli_fetch_array($consulta)) {
     		labels:[<?php echo $mes; ?>],
     		datasets:
     		[{
-    			label:'Temperatura Externa',
+    			label:'<?php echo $external_temp; ?>',
     			data:[<?php echo $temp; ?>],
     			backgroundColor: 'transparent',
     			borderColor: 'rgba(255,99,132)',
     			borderWidth: 3
     		},
     		{
-    			label:'Temperatura interna',
+    			label:'<?php echo $internal_temp; ?>',
     			data:[<?php echo $tempint; ?>],
     			backgroundColor: 'transparent',
     			borderColor: 'blue',
@@ -163,7 +169,7 @@ while ($dados = mysqli_fetch_array($consulta)) {
 				scaleLabel: 
 					{
 					display: true,
-					labelString: 'Dia',
+					labelString: '<?php echo $data; ?>',
 					fontColor:'grey',
 					fontSize:11
 					},

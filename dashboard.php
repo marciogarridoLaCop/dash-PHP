@@ -39,10 +39,10 @@
             FoR
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">Ação</a>
-            <a class="dropdown-item" href="#">Outra ação</a>
+            <a class="dropdown-item" href="#">Action1</a>
+            <a class="dropdown-item" href="#">Action2</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Algo mais aqui</a>
+            <a class="dropdown-item" href="#">Action3</a>
           </div>
         </li>
 
@@ -66,19 +66,19 @@
             <li class="nav-item">
               <a class="nav-link" href="?pagina=aca" style="color:#000;text-decoration: none"> 
 
-                <i class="fas fa-box"></i>&nbsp;Nível
+                <i class="fas fa-box"></i>&nbsp;Level
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?pagina=temperatura" style="color:#000;text-decoration: none">
 
-                <i class="far fa-user"></i>&nbsp;Temperatura
+                <i class="far fa-user"></i>&nbsp;Temperature
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?pagina=umidade" style="color:#000;text-decoration: none">
 
-                <i class="fas fa-dollar-sign"></i>&nbsp;Umidade
+                <i class="fas fa-dollar-sign"></i>&nbsp;Full data
               </a>
             </li>
             
@@ -121,8 +121,8 @@
     
                 default:
                 echo '<h2>Flooding on Route</h2>';
-                include 'default.php'; 
-                include 'default2.php'; 
+                include($_SERVER['DOCUMENT_ROOT'].'/dash-php/php_files/default.php');
+                include($_SERVER['DOCUMENT_ROOT'].'/dash-php/php_files/default2.php');
     
                 break;
               }
@@ -150,19 +150,19 @@
         <li class="nav-item" >
           <a class="nav-link" href="?pagina=aca" style="text-decoration: none"> 
 
-         Nível
+         Level
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="?pagina=temperatura">
 
-        Temperatura
+        Temperature
           </a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="?pagina=umidade">
 
-        Umidade
+        Full Data
           </a>
         </li>
 
