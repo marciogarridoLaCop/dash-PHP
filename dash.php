@@ -12,6 +12,19 @@
    
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
+    </style>
+
+<style type="text/css">
+  @media only screen and (max-width: 600px) {
+    body {
+      width : 350px;
+      text-align: center;
+    }
+  }
+
+
+</style>
+
   <body>
     <nav class="navbar navbar-dark bg-dark flex-md-nowrap p-0 shadow">
       <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="https://getbootstrap.com.br/docs/4.1/examples/dashboard/#">Flooding on Route</a>
@@ -93,6 +106,7 @@
             default:
             echo '<h2>Flooding on Route</h2>';
             include 'default.php'; 
+            include 'default2.php'; 
 
             break;
           }

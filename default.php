@@ -81,7 +81,7 @@
                                     $sql = "SELECT pressaoAtm AS pressao from SensorLogs order by id desc limit 1";
                                     $consulta = mysqli_query($conn,$sql);
                                     $dados = mysqli_fetch_array($consulta);
-                                    echo $dados['pressao'];
+                                    echo round($dados['pressao'], 1);;
                                     ?>
 									<span style="font-size: 10px"> / (Pa)</span></h5>
 
