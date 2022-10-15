@@ -6,9 +6,8 @@
   <meta name="description" content="Painel de administração do FOR">
   <meta name="author" content="Márcio Garrido">
   <link rel="icon" href="https://getbootstrap.com.br/favicon.ico">
-  <script src="https://kit.fontawesome.com/8786c39b09.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/1127749d18.js" crossorigin="anonymous"></script>
   <title>Flooding on Route</title>
-
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </style>
 
@@ -66,19 +65,19 @@
             <li class="nav-item">
               <a class="nav-link" href="?pagina=aca" style="color:#000;text-decoration: none"> 
 
-                <i class="fas fa-box"></i>&nbsp;Level
+              <i class="fa-sharp fa-solid fa-water"></i>&nbsp;Level
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?pagina=temperatura" style="color:#000;text-decoration: none">
 
-                <i class="far fa-user"></i>&nbsp;Temperature
+              <i class="fa-sharp fa-solid fa-temperature-three-quarters"></i>&nbsp;Temperature
               </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="?pagina=umidade" style="color:#000;text-decoration: none">
 
-                <i class="fas fa-dollar-sign"></i>&nbsp;Full data
+              <i class="fa-sharp fa-solid fa-download"></i></i>&nbsp;Full data
               </a>
             </li>
             
@@ -114,8 +113,8 @@
                 break;
     
                 case 'umidade':
-                  echo '<h2>Umidade</h2>';
-    
+                  echo '<h2>Full Data</h2>';
+                  include 'php_files/full_data.php'; 
                 
                 break;
     
@@ -176,13 +175,14 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
 
       <script type="text/javascript">
 
         $(window).resize(function(){
-          drawChart();
-          drawChart2();
+        //  drawChart();
+        //  drawChart2();
         });
 
       </script>
