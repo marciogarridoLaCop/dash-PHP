@@ -17,5 +17,5 @@ node_modules
 cnn/cnn.php
 
 # Testes de gráficos
-/graficos/*.php
+graficos/*.php
 
