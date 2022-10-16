@@ -15,3 +15,5 @@ node_modules
 
 # Credenciais do originais do banco 
 cnn/cnn.php
+/graficos
+
