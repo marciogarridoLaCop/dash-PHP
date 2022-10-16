@@ -46,7 +46,6 @@ $data="Date";
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 </head>
 <body>
-<body>
 <div class="container-fluid" style="background-color: #fff;margin-top: 20px;">
     <div class="row">
       <div class="col-md-6">
