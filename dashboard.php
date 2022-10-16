@@ -104,12 +104,12 @@
                 case 'aca':
                 echo '<h2>Level</h2>';
                 include($_SERVER['DOCUMENT_ROOT'].'/dash-php/php_files/level.php');
-                //include($_SERVER['DOCUMENT_ROOT'].'/dash-php/php_files/level2.php');
+                
                 
                 break;
     
                 case 'temperatura':
-                  echo '<h2>Temperatura</h2>';
+                  echo '<h2>Temperature</h2>';
                   include($_SERVER['DOCUMENT_ROOT'].'/dash-php/php_files/temp.php');
                 break;
     
