@@ -75,7 +75,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="?pagina=umidade" style="color:#000;text-decoration: none">
+              <a class="nav-link" href="?pagina=dados" style="color:#000;text-decoration: none">
 
               <i class="fa-sharp fa-solid fa-download"></i></i>&nbsp;Full data
               </a>
@@ -103,16 +103,17 @@
             switch ($_GET['pagina']) {
                 case 'aca':
                 echo '<h2>Level</h2>';
-                include 'graficos/graficos.php'; 
+                include($_SERVER['DOCUMENT_ROOT'].'/dash-php/php_files/level.php');
+                //include($_SERVER['DOCUMENT_ROOT'].'/dash-php/php_files/level2.php');
                 
                 break;
     
                 case 'temperatura':
                   echo '<h2>Temperatura</h2>';
-                
+                  include($_SERVER['DOCUMENT_ROOT'].'/dash-php/php_files/temp.php');
                 break;
     
-                case 'umidade':
+                case 'dados':
                   echo '<h2>Full Data</h2>';
                   include 'php_files/data.php'; 
                 
@@ -159,7 +160,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="?pagina=umidade">
+          <a class="nav-link" href="?pagina=dados">
 
         Full Data
           </a>
@@ -181,8 +182,8 @@
       <script type="text/javascript">
 
         $(window).resize(function(){
-        //  drawChart();
-        //  drawChart2();
+          drawChart();
+          drawChart2();
         });
 
       </script>
