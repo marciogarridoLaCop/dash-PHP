@@ -22,11 +22,9 @@
   }
 </style>
 </head>
-
-
 <body>
   <nav class="navbar navbar-expand-lg d-none d-sm-block" style="background-color: #250352; color: #fff">
-    <a class="navbar-brand" href="#" style="text-decoration: none;color: #fff"><img src="../dash-Php/img/logo.jpg" width="85px" height="85px"></a>
+    <a class="navbar-brand" href="#" style="text-decoration: none;color: #fff"><img src="img/logo.jpg" width="85px" height="85px"></a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -114,8 +112,7 @@
                 break;
     
                 case 'dados':
-                  echo '<h2>Full Data</h2>';
-                  include 'php_files/data.php'; 
+                  include 'php_files/full.php'; 
                 
                 break;
     
@@ -173,11 +170,9 @@
 
     <!-- Principal JavaScript do Bootstrap
       ================================================== -->
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-
 
       <script type="text/javascript">
 

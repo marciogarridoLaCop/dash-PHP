@@ -1,8 +1,8 @@
 <?php
 #Consultando valores no banco de dados
 include($_SERVER['DOCUMENT_ROOT'].'/dash-php/cnn/cnn.php');
-  $sql = "SELECT DATE_FORMAT (`Datahora`,'%d/%m/%Y %H:%i') as data_formatada,h,PressaoAtm,aca,aca_adj FROM SensorLogs 
-  WHERE datahora BETWEEN DATE_SUB(DATE(NOW()), INTERVAL 2 DAY) AND DATE_SUB(DATE(NOW()), INTERVAL 0 DAY)";
+  $sql = "SELECT DATE_FORMAT (`Datahora`,'%d/%m/%Y %H:%i') as data_formatada,h,PressaoAtm,aca,aca_adj FROM (SELECT 
+  * FROM SensorLogs ORDER BY id DESC LIMIT 50) lastNrows_subquery ORDER BY id";
   $consulta = mysqli_query($conn,$sql);
 
 $mes = '';

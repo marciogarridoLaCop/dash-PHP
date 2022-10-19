@@ -9,23 +9,16 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/css/jquery.dataTables.min.css"
       integrity="sha512-1k7mWiTNoyx2XtmI96o+hdjP8nn0f3Z2N4oF/9ZZRgijyV4omsKOXEnqL1gKQNPy2MTSP9rIEWGcH/CInulptA=="
       crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-<body>
+      referrerpolicy="no-referrer"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-<br><script src = "http://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer ></script>
-
-	
-
-
-
+<br><script src = "https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js" defer ></script>
 
 <body style="background-color: #f3f3f3" >
 <div class="container-fluid">
 		<div class="row">
 			<div class="col-md-12">
-			<table id="tabela" class="table table-striped" style="width:100%">
+<table id="tabela" class="table table-striped table-bordered nowrap" style="width:100%">
         <thead>
             <tr >
                 <th>id</th>
@@ -108,10 +101,8 @@
                 <th>IP</th>
             </tr>
         </tfoot>
-    </table>
-    <script src="/dash-php/js/pagination.js"></script>
-</div>
-
-		</div>	
+</table>
+    <script src="/dash-php/js/responsive.js"></script>
+</div>	
 </body>
 </html>

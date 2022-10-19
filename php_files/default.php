@@ -14,7 +14,7 @@
    <!-- Captura do último valore gravado no banco -->
 <?php
 include($_SERVER['DOCUMENT_ROOT'].'/dash-php/cnn/cnn.php');
-			$sql = "SELECT Bateria AS tensao,temp AS temperatura,tempint AS temperatura_interna,pressaoAtm AS pressao
+			$sql = "SELECT DATE_FORMAT (`Datahora`,'%d/%m/%Y %H:%i') as data_formatada,Bateria AS tensao,temp AS temperatura,tempint AS temperatura_interna,pressaoAtm AS pressao
 			from SensorLogs order by id desc limit 1";
 			$consulta = mysqli_query($conn,$sql);
             $dados = mysqli_fetch_array($consulta);
@@ -22,6 +22,11 @@ include($_SERVER['DOCUMENT_ROOT'].'/dash-php/cnn/cnn.php');
 ?>
 <body style="background-color: #f3f3f3" >
 <div class="container-fluid">
+	Última gravação no banco de dado em :
+							<?php
+                            echo $dados['data_formatada'];
+							?>
+							<br></br>
 		<div class="row">
 			<div class="col-md-3">
 				<div class="card text-white bg-primary mb-3" style="max-width: 18rem;" id="sombra">
