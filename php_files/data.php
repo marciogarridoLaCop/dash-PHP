@@ -41,7 +41,7 @@
 
             <?php
             include($_SERVER['DOCUMENT_ROOT'].'/dash-php/cnn/cnn.php');
-            $sql = "SELECT ID,IDEquip, DATE_FORMAT (`Datahora`,'%d/%m/%Y %H:%i') as data_formatada, aca_adj,aca,temp,h,PressaoAtm,Temppelt,Tampa,Bateria,ACantes,ACDepois,IPAddress FROM SensorLogs";
+            $sql = "SELECT ID,IDEquip, DATE_FORMAT (`Datahora`,'%d/%m/%Y %H:%i') as data_formatada, aca_adj,aca,temp,h,PressaoAtm,Temppelt,Tampa,Bateria,ACantes,ACDepois,IPAddress FROM SensorLogs order by id desc";
             $query = mysqli_query($conn,$sql);
 
             while ($dados = mysqli_fetch_array($query)) {

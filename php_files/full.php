@@ -20,19 +20,7 @@
 	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/fixedheader/3.2.4/js/dataTables.fixedHeader.min.js"></script>
 	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.3.0/js/dataTables.responsive.min.js"></script>
 	<script type="text/javascript" language="javascript" src="https://cdn.datatables.net/responsive/2.3.0/js/responsive.bootstrap.min.js"></script>
-	<script type="text/javascript" class="init">
 	
-
-$(document).ready(function() {
-	var table = $('#example').DataTable( {
-		responsive: true
-	} );
-
-	new $.fn.dataTable.FixedHeader( table );
-} );
-
-
-	</script>
 </head>
 <body class="wide comments example dt-example-bootstrap">
 	<a name="top" id="top"></a>
@@ -49,7 +37,7 @@ $(document).ready(function() {
 					<p>Os dados coletados poderão ser filtrados e apresentados de acordo com as condições abaixo</p>
 				</div>
 				<div class="demo-html">
-					<table id="example" class="table table-striped table-bordered nowrap" style="width:100%">
+					<table id="tabela" class="table table-striped table-bordered nowrap" style="width:100%">
 						<thead>
 							<tr>
 							<th>id</th>
@@ -113,6 +101,7 @@ $(document).ready(function() {
            		<?php } ?>
 						</tbody>
 					</table>
+					<script src="/dash-php/js/responsive.js"></script>
 				</div>	
 			</div>
 		</div>

@@ -22,7 +22,7 @@ include($_SERVER['DOCUMENT_ROOT'].'/dash-php/cnn/cnn.php');
 ?>
 <body style="background-color: #f3f3f3" >
 <div class="container-fluid">
-	Última gravação no banco de dado em :
+	Última gravação no banco de dados em :
 							<?php
                             echo $dados['data_formatada'];
 							?>
